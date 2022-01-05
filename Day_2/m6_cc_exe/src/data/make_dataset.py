@@ -1,12 +1,14 @@
 # -*- coding: utf-8 -*-
-import click
-import logging
-import torch
 import glob
-import numpy as np
-from torch.utils.data import Dataset
+import logging
 from pathlib import Path
+
+import click
+import numpy as np
+import torch
 from dotenv import find_dotenv, load_dotenv
+from torch.utils.data import Dataset
+
 
 class Corrupt_MNIST(Dataset):
     def __init__(self,filepath,train=True):

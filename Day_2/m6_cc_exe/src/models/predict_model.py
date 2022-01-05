@@ -1,15 +1,16 @@
-import numpy as np
+import glob
+import logging
 import pickle
 import sys
+from pathlib import Path
 
+import click
+import numpy as np
 import torch
+from dotenv import find_dotenv, load_dotenv
 from torch import nn
 from torch.utils.data import Dataset
-import click
-import logging
-import glob
-from pathlib import Path
-from dotenv import find_dotenv, load_dotenv
+
 
 class Corrupt_MNIST(Dataset):
     def __init__(self,filepath,train=True):

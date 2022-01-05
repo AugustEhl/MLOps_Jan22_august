@@ -1,18 +1,21 @@
+import pickle
 import sys
+
+import matplotlib.pyplot as plt
 import numpy as np
 from sklearn.manifold import TSNE
-import pickle
-import matplotlib.pyplot as plt
+
 sys.path.insert(0,'src/models')
 
+import logging
+from pathlib import Path
+
+import click
 import torch
+from dotenv import find_dotenv, load_dotenv
 from torch import nn
 from torch.utils.data import Dataset
 
-import click
-import logging
-from pathlib import Path
-from dotenv import find_dotenv, load_dotenv
 
 class Corrupt_MNIST(Dataset):
     def __init__(self,filepath,train=True):
