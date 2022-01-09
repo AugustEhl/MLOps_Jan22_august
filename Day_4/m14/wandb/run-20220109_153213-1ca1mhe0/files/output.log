@@ -1,0 +1,95 @@
+Traceback (most recent call last):
+  File "/Users/augustehlers/OneDrive - Danmarks Tekniske Universitet/Studiemappe/11. semester/MLOps/MLOps_Jan22_August/Day_4/m14/P_lightning.py", line 28, in <module>
+    train()
+  File "/Users/augustehlers/OneDrive - Danmarks Tekniske Universitet/Studiemappe/11. semester/MLOps/MLOps_Jan22_August/Day_4/m14/P_lightning.py", line 26, in train
+    trainer.fit(model,train_dataloader=train_loader)
+  File "/Users/augustehlers/miniconda3/lib/python3.9/site-packages/pytorch_lightning/trainer/trainer.py", line 740, in fit
+    self._call_and_handle_interrupt(
+  File "/Users/augustehlers/miniconda3/lib/python3.9/site-packages/pytorch_lightning/trainer/trainer.py", line 685, in _call_and_handle_interrupt
+    return trainer_fn(*args, **kwargs)
+  File "/Users/augustehlers/miniconda3/lib/python3.9/site-packages/pytorch_lightning/trainer/trainer.py", line 777, in _fit_impl
+    self._run(model, ckpt_path=ckpt_path)
+  File "/Users/augustehlers/miniconda3/lib/python3.9/site-packages/pytorch_lightning/trainer/trainer.py", line 1199, in _run
+    self._dispatch()
+  File "/Users/augustehlers/miniconda3/lib/python3.9/site-packages/pytorch_lightning/trainer/trainer.py", line 1279, in _dispatch
+    self.training_type_plugin.start_training(self)
+  File "/Users/augustehlers/miniconda3/lib/python3.9/site-packages/pytorch_lightning/plugins/training_type/training_type_plugin.py", line 202, in start_training
+    self._results = trainer.run_stage()
+  File "/Users/augustehlers/miniconda3/lib/python3.9/site-packages/pytorch_lightning/trainer/trainer.py", line 1289, in run_stage
+    return self._run_train()
+  File "/Users/augustehlers/miniconda3/lib/python3.9/site-packages/pytorch_lightning/trainer/trainer.py", line 1319, in _run_train
+    self.fit_loop.run()
+  File "/Users/augustehlers/miniconda3/lib/python3.9/site-packages/pytorch_lightning/loops/base.py", line 145, in run
+    self.advance(*args, **kwargs)
+  File "/Users/augustehlers/miniconda3/lib/python3.9/site-packages/pytorch_lightning/loops/fit_loop.py", line 234, in advance
+    self.epoch_loop.run(data_fetcher)
+  File "/Users/augustehlers/miniconda3/lib/python3.9/site-packages/pytorch_lightning/loops/base.py", line 145, in run
+    self.advance(*args, **kwargs)
+  File "/Users/augustehlers/miniconda3/lib/python3.9/site-packages/pytorch_lightning/loops/epoch/training_epoch_loop.py", line 193, in advance
+    batch_output = self.batch_loop.run(batch, batch_idx)
+  File "/Users/augustehlers/miniconda3/lib/python3.9/site-packages/pytorch_lightning/loops/base.py", line 145, in run
+    self.advance(*args, **kwargs)
+  File "/Users/augustehlers/miniconda3/lib/python3.9/site-packages/pytorch_lightning/loops/batch/training_batch_loop.py", line 88, in advance
+    outputs = self.optimizer_loop.run(split_batch, optimizers, batch_idx)
+  File "/Users/augustehlers/miniconda3/lib/python3.9/site-packages/pytorch_lightning/loops/base.py", line 145, in run
+    self.advance(*args, **kwargs)
+  File "/Users/augustehlers/miniconda3/lib/python3.9/site-packages/pytorch_lightning/loops/optimization/optimizer_loop.py", line 215, in advance
+    result = self._run_optimization(
+  File "/Users/augustehlers/miniconda3/lib/python3.9/site-packages/pytorch_lightning/loops/optimization/optimizer_loop.py", line 266, in _run_optimization
+    self._optimizer_step(optimizer, opt_idx, batch_idx, closure)
+  File "/Users/augustehlers/miniconda3/lib/python3.9/site-packages/pytorch_lightning/loops/optimization/optimizer_loop.py", line 378, in _optimizer_step
+    lightning_module.optimizer_step(
+  File "/Users/augustehlers/miniconda3/lib/python3.9/site-packages/pytorch_lightning/core/lightning.py", line 1652, in optimizer_step
+    optimizer.step(closure=optimizer_closure)
+  File "/Users/augustehlers/miniconda3/lib/python3.9/site-packages/pytorch_lightning/core/optimizer.py", line 164, in step
+    trainer.accelerator.optimizer_step(self._optimizer, self._optimizer_idx, closure, **kwargs)
+  File "/Users/augustehlers/miniconda3/lib/python3.9/site-packages/pytorch_lightning/accelerators/accelerator.py", line 336, in optimizer_step
+    self.precision_plugin.optimizer_step(model, optimizer, opt_idx, closure, **kwargs)
+  File "/Users/augustehlers/miniconda3/lib/python3.9/site-packages/pytorch_lightning/plugins/precision/precision_plugin.py", line 163, in optimizer_step
+    optimizer.step(closure=closure, **kwargs)
+  File "/Users/augustehlers/miniconda3/lib/python3.9/site-packages/torch/optim/optimizer.py", line 88, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/augustehlers/miniconda3/lib/python3.9/site-packages/torch/autograd/grad_mode.py", line 28, in decorate_context
+    return func(*args, **kwargs)
+  File "/Users/augustehlers/miniconda3/lib/python3.9/site-packages/torch/optim/adam.py", line 92, in step
+    loss = closure()
+  File "/Users/augustehlers/miniconda3/lib/python3.9/site-packages/pytorch_lightning/plugins/precision/precision_plugin.py", line 148, in _wrap_closure
+    closure_result = closure()
+  File "/Users/augustehlers/miniconda3/lib/python3.9/site-packages/pytorch_lightning/loops/optimization/optimizer_loop.py", line 160, in __call__
+    self._result = self.closure(*args, **kwargs)
+  File "/Users/augustehlers/miniconda3/lib/python3.9/site-packages/pytorch_lightning/loops/optimization/optimizer_loop.py", line 142, in closure
+    step_output = self._step_fn()
+  File "/Users/augustehlers/miniconda3/lib/python3.9/site-packages/pytorch_lightning/loops/optimization/optimizer_loop.py", line 435, in _training_step
+    training_step_output = self.trainer.accelerator.training_step(step_kwargs)
+  File "/Users/augustehlers/miniconda3/lib/python3.9/site-packages/pytorch_lightning/accelerators/accelerator.py", line 216, in training_step
+    return self.training_type_plugin.training_step(*step_kwargs.values())
+  File "/Users/augustehlers/miniconda3/lib/python3.9/site-packages/pytorch_lightning/plugins/training_type/training_type_plugin.py", line 213, in training_step
+    return self.model.training_step(*args, **kwargs)
+  File "/Users/augustehlers/OneDrive - Danmarks Tekniske Universitet/Studiemappe/11. semester/MLOps/MLOps_Jan22_August/Day_4/m14/model.py", line 41, in training_step
+    self.logger.experiment.log({'logits': wandb.plot.histogram(self.table,"Height",title='Predicted target distribution')})
+  File "/Users/augustehlers/miniconda3/lib/python3.9/site-packages/wandb/sdk/wandb_run.py", line 1339, in log
+    self.history._row_add(data)
+  File "/Users/augustehlers/miniconda3/lib/python3.9/site-packages/wandb/sdk/wandb_history.py", line 44, in _row_add
+    self._flush()
+  File "/Users/augustehlers/miniconda3/lib/python3.9/site-packages/wandb/sdk/wandb_history.py", line 59, in _flush
+    self._callback(row=self._data, step=self._step)
+  File "/Users/augustehlers/miniconda3/lib/python3.9/site-packages/wandb/sdk/wandb_run.py", line 1017, in _history_callback
+    self._backend.interface.publish_history(
+  File "/Users/augustehlers/miniconda3/lib/python3.9/site-packages/wandb/sdk/interface/interface.py", line 496, in publish_history
+    data = data_types.history_dict_to_json(run, data, step=step)
+  File "/Users/augustehlers/miniconda3/lib/python3.9/site-packages/wandb/sdk/data_types.py", line 2597, in history_dict_to_json
+    payload[key] = val_to_json(run, key, val, namespace=step)
+  File "/Users/augustehlers/miniconda3/lib/python3.9/site-packages/wandb/sdk/data_types.py", line 2669, in val_to_json
+    art.add(val, key)
+  File "/Users/augustehlers/miniconda3/lib/python3.9/site-packages/wandb/sdk/wandb_artifacts.py", line 522, in add
+    do_write(f)
+  File "/Users/augustehlers/miniconda3/lib/python3.9/site-packages/wandb/sdk/wandb_artifacts.py", line 510, in do_write
+    f.write(json.dumps(val, sort_keys=True))
+  File "/Users/augustehlers/miniconda3/lib/python3.9/json/__init__.py", line 234, in dumps
+    return cls(
+  File "/Users/augustehlers/miniconda3/lib/python3.9/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/Users/augustehlers/miniconda3/lib/python3.9/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/Users/augustehlers/miniconda3/lib/python3.9/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '

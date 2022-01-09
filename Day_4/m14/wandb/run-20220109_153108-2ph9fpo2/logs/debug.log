@@ -1,0 +1,54 @@
+2022-01-09 15:31:08,004 INFO    MainThread:5020 [wandb_setup.py:_flush():71] setting env: {}
+2022-01-09 15:31:08,004 INFO    MainThread:5020 [wandb_setup.py:_flush():71] setting login settings: {}
+2022-01-09 15:31:08,004 INFO    MainThread:5020 [wandb_init.py:_log_setup():371] Logging user logs to /Users/augustehlers/OneDrive - Danmarks Tekniske Universitet/Studiemappe/11. semester/MLOps/MLOps_Jan22_August/Day_4/m14/wandb/run-20220109_153108-2ph9fpo2/logs/debug.log
+2022-01-09 15:31:08,004 INFO    MainThread:5020 [wandb_init.py:_log_setup():372] Logging internal logs to /Users/augustehlers/OneDrive - Danmarks Tekniske Universitet/Studiemappe/11. semester/MLOps/MLOps_Jan22_August/Day_4/m14/wandb/run-20220109_153108-2ph9fpo2/logs/debug-internal.log
+2022-01-09 15:31:08,004 INFO    MainThread:5020 [wandb_init.py:init():404] calling init triggers
+2022-01-09 15:31:08,004 INFO    MainThread:5020 [wandb_init.py:init():409] wandb.init called with sweep_config: {}
+config: {}
+2022-01-09 15:31:08,004 INFO    MainThread:5020 [wandb_init.py:init():460] starting backend
+2022-01-09 15:31:08,004 INFO    MainThread:5020 [backend.py:_multiprocessing_setup():99] multiprocessing start_methods=spawn,fork,forkserver, using: spawn
+2022-01-09 15:31:08,006 INFO    MainThread:5020 [backend.py:ensure_launched():216] starting backend process...
+2022-01-09 15:31:08,014 INFO    MainThread:5020 [backend.py:ensure_launched():221] started backend process with pid: 5028
+2022-01-09 15:31:08,015 INFO    MainThread:5020 [wandb_init.py:init():469] backend started and connected
+2022-01-09 15:31:08,020 INFO    MainThread:5020 [wandb_init.py:init():533] updated telemetry
+2022-01-09 15:31:08,046 INFO    MainThread:5020 [wandb_init.py:init():563] communicating current version
+2022-01-09 15:31:09,183 INFO    MainThread:5020 [wandb_init.py:init():568] got version response 
+2022-01-09 15:31:09,183 INFO    MainThread:5020 [wandb_init.py:init():578] communicating run to backend with 30 second timeout
+2022-01-09 15:31:09,558 INFO    MainThread:5020 [wandb_init.py:init():606] starting run threads in backend
+2022-01-09 15:31:12,213 INFO    MainThread:5020 [wandb_run.py:_console_start():1810] atexit reg
+2022-01-09 15:31:12,213 INFO    MainThread:5020 [wandb_run.py:_redirect():1684] redirect: SettingsConsole.REDIRECT
+2022-01-09 15:31:12,214 INFO    MainThread:5020 [wandb_run.py:_redirect():1689] Redirecting console.
+2022-01-09 15:31:12,214 INFO    MainThread:5020 [wandb_run.py:_redirect():1745] Redirects installed.
+2022-01-09 15:31:12,215 INFO    MainThread:5020 [wandb_init.py:init():633] run started, returning control to user process
+2022-01-09 15:31:12,215 INFO    MainThread:5020 [wandb_run.py:_config_callback():956] config_cb ('_wandb', 'visualize', 'logits') {'panel_type': 'Vega2', 'panel_config': {'userQuery': {'queryFields': [{'name': 'runSets', 'args': [{'name': 'runSets', 'value': '${runSets}'}], 'fields': [{'name': 'id', 'fields': []}, {'name': 'name', 'fields': []}, {'name': '_defaultColorIndex', 'fields': []}, {'name': 'summaryTable', 'args': [{'name': 'tableKey', 'value': 'logits_table'}], 'fields': []}]}]}, 'panelDefId': 'wandb/histogram/v0', 'transform': {'name': 'tableWithLeafColNames'}, 'fieldSettings': {'value': 'Height'}, 'stringSettings': {'title': 'Predicted target distribution'}}} None
+2022-01-09 15:31:12,223 INFO    MainThread:5020 [wandb_run.py:_atexit_cleanup():1780] got exitcode: 1
+2022-01-09 15:31:12,225 INFO    MainThread:5020 [wandb_run.py:_restore():1752] restore
+2022-01-09 15:31:16,850 ERROR   MainThread:5020 [wandb_run.py:_atexit_cleanup():1798] Problem finishing run
+Traceback (most recent call last):
+  File "/Users/augustehlers/miniconda3/lib/python3.9/site-packages/wandb/sdk/wandb_run.py", line 1788, in _atexit_cleanup
+    self._on_finish()
+  File "/Users/augustehlers/miniconda3/lib/python3.9/site-packages/wandb/sdk/wandb_run.py", line 1934, in _on_finish
+    self.history._flush()
+  File "/Users/augustehlers/miniconda3/lib/python3.9/site-packages/wandb/sdk/wandb_history.py", line 59, in _flush
+    self._callback(row=self._data, step=self._step)
+  File "/Users/augustehlers/miniconda3/lib/python3.9/site-packages/wandb/sdk/wandb_run.py", line 1017, in _history_callback
+    self._backend.interface.publish_history(
+  File "/Users/augustehlers/miniconda3/lib/python3.9/site-packages/wandb/sdk/interface/interface.py", line 496, in publish_history
+    data = data_types.history_dict_to_json(run, data, step=step)
+  File "/Users/augustehlers/miniconda3/lib/python3.9/site-packages/wandb/sdk/data_types.py", line 2597, in history_dict_to_json
+    payload[key] = val_to_json(run, key, val, namespace=step)
+  File "/Users/augustehlers/miniconda3/lib/python3.9/site-packages/wandb/sdk/data_types.py", line 2669, in val_to_json
+    art.add(val, key)
+  File "/Users/augustehlers/miniconda3/lib/python3.9/site-packages/wandb/sdk/wandb_artifacts.py", line 522, in add
+    do_write(f)
+  File "/Users/augustehlers/miniconda3/lib/python3.9/site-packages/wandb/sdk/wandb_artifacts.py", line 510, in do_write
+    f.write(json.dumps(val, sort_keys=True))
+  File "/Users/augustehlers/miniconda3/lib/python3.9/json/__init__.py", line 234, in dumps
+    return cls(
+  File "/Users/augustehlers/miniconda3/lib/python3.9/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/Users/augustehlers/miniconda3/lib/python3.9/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/Users/augustehlers/miniconda3/lib/python3.9/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type Tensor is not JSON serializable

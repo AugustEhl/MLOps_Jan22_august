@@ -1,0 +1,22 @@
+{
+    "os": "macOS-10.16-x86_64-i386-64bit",
+    "python": "3.9.5",
+    "heartbeatAt": "2022-01-09T14:28:31.503723",
+    "startedAt": "2022-01-09T14:28:29.604671",
+    "docker": null,
+    "cpu_count": 8,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "/Users/augustehlers/OneDrive - Danmarks Tekniske Universitet/Studiemappe/11. semester/MLOps/MLOps_Jan22_August/Day_4/m14/P_lightning.py",
+    "codePath": "Day_4/m14/P_lightning.py",
+    "git": {
+        "remote": "git@github.com:AugustEhl/MLOps_day2.git",
+        "commit": "7a7e9a71e391a40ee3d5cb2ab8a04070a6ceebcf"
+    },
+    "email": "august.ehlers@gmail.com",
+    "root": "/Users/augustehlers/OneDrive - Danmarks Tekniske Universitet/Studiemappe/11. semester/MLOps/MLOps_Jan22_August",
+    "host": "MacBook-Pro-tilhrende-August.local",
+    "username": "augustehlers",
+    "executable": "/Users/augustehlers/miniconda3/bin/python"
+}
