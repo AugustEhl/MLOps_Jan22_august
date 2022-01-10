@@ -1,0 +1,11 @@
+conf_model:
+  hyperparameters:
+    hidden_dim: 256
+    dropout: 0.2
+conf_training:
+  hyperparameters:
+    batch_size: 64
+    learning_rate: 0.001
+    seed: 42
+    epochs: 20
+    weight_decay: 0.001

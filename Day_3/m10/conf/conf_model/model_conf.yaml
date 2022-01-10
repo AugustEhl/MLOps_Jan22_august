@@ -1,0 +1,6 @@
+#model_conf.yaml
+
+hidden_dim: 256
+dropout: 0.2
+
+
