@@ -2,7 +2,7 @@ import numpy as np
 from tests import _PATH_TRAINING, _PATH_DATA
 import sys
 sys.path.append(_PATH_TRAINING)
-from training import num_epochs, lr, batch_size, weight_decay
+from test_data import dataset
 
 assert num_epochs != None
 assert lr != None
