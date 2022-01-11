@@ -43,4 +43,4 @@ def mnist(filepath):
     test = Corrupt_MNIST(filepath, train=False)
     return train, test
 
-torch.save(mnist('../../../dtu_mlops/data/corruptmnist/'),'data.pth')
+#torch.save(mnist('../../../dtu_mlops/data/corruptmnist/'),'data.pth')
