@@ -37,7 +37,7 @@ class MyAwesomeModel(LightningModule):
         self.log('train_acc', acc)
         predictions = preds.argmax(dim=-1)
         pred_targets = [[s.item()] for s in predictions]
-        self.table.add_data(pred_targets) 
+        self.table.add_data(pred_targets)
         self.logger.experiment.log({'logits': wandb.plot.histogram(self.table,"Height",title='Predicted target distribution')})
         return loss
     
