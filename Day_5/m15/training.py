@@ -3,6 +3,7 @@ import torch
 from model import MyAwesomeModel
 from torch import nn
 from torch import optim
+import os
 
 print("Training day and night")
 lr = 0.001
@@ -14,7 +15,7 @@ batch_size = 5
 model = MyAwesomeModel()
 criterion = nn.CrossEntropyLoss()
 optimizer = optim.Adam(model.parameters(),lr=lr,betas=(0.85,0.89),weight_decay=weight_decay)
-train_set = torch.load('data.pth')[0]
+train_set = torch.load(os.getcwd() + '/data.pth')[0]
 trainloader = torch.utils.data.DataLoader(train_set, batch_size=batch_size, shuffle=True)
 train_loss = []
 train_acc = []
