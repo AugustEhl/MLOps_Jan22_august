@@ -3,7 +3,6 @@ import numpy as np
 import torch
 #import sys
 #sys.path.append(_PATH_DATA)
-#from data import Corrupt_MNIST
 
 dataset = torch.load(_PATH_DATA)
 assert len(dataset[0].labels.data.numpy()) == 25000

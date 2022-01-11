@@ -1,9 +1,7 @@
-import numpy as np
+from tests import _PATH_TRAINING
 import sys
-from tests import __PATH_TRAINING
 sys.path.append(_PATH_TRAINING)
-from _PATH_TRAINING import num_epochs, lr, batch_size, weight_decay
-
+from training import num_epochs, lr, batch_size, weight_decay
 
 assert num_epochs != None
 assert lr != None
