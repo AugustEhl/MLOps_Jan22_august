@@ -15,7 +15,7 @@ batch_size = 5
 model = MyAwesomeModel()
 criterion = nn.CrossEntropyLoss()
 optimizer = optim.Adam(model.parameters(),lr=lr,betas=(0.85,0.89),weight_decay=weight_decay)
-train_set, _ = mnist('../../../dtu_mlops/data/corruptmnist/')
+train_set = torch.load('data.pth')[0]
 trainloader = torch.utils.data.DataLoader(train_set, batch_size=batch_size, shuffle=True)
 train_loss = []
 train_acc = []
