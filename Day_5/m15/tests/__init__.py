@@ -7,5 +7,5 @@ _PATH_DATA = os.path.join(_PROJECT_ROOT, "data.pth")  # root of data
 print('_PATH_DATA', _PATH_DATA)
 _PATH_MODEL = os.path.join(_PROJECT_ROOT, "model.py")
 print('_PATH_MODEL', _PATH_MODEL)
-_PATH_TRAINING = os.path.join(_PROJECT_ROOT,"{training.py,data.pth}")
+_PATH_TRAINING = os.path.join(_PROJECT_ROOT,"training.py")
 print('_PATH_TRAINING', _PATH_TRAINING)
