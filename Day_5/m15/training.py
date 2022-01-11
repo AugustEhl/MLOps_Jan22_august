@@ -9,7 +9,7 @@ print("Training day and night")
 lr = 0.001
 weight_decay = 1e-3
 num_epochs = 5
-batch_size = 64
+batch_size = 5
 
 # TODO: Implement training loop here
 model = MyAwesomeModel()
