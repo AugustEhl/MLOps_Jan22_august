@@ -3,7 +3,6 @@ import torch
 from model import MyAwesomeModel
 from torch import nn
 from torch import optim
-from data import mnist
 
 print("Training day and night")
 lr = 0.001
