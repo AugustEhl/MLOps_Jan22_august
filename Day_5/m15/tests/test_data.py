@@ -2,7 +2,7 @@ from tests import _PATH_DATA
 import numpy as np
 import torch
 import sys
-sys.append(_PATH_DATA)
+sys.path.append(_PATH_DATA)
 from data import Corrupt_MNIST
 
 dataset = torch.load(_PATH_DATA)
