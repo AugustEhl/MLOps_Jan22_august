@@ -1,5 +1,6 @@
 import numpy as np
 import sys
+from tests import __PATH_TRAINING
 sys.path.append(_PATH_TRAINING)
 from _PATH_TRAINING import num_epochs, lr, batch_size, weight_decay
 
