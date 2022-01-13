@@ -1,0 +1,5 @@
+[core]
+    no_scm = True
+    remote = remote_storage
+['remote "remote_storage"']
+    url = gs://m18_example_bucket/
