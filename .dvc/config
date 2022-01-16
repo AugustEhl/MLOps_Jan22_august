@@ -1,0 +1,6 @@
+[core]
+    remote = remote_storage
+['remote "storage"']
+    url = gdrive://1BYDYdK8iO2bxQTzOeGbWM-RK8r5HhSjO
+['remote "remote_storage"']
+    url = gs://example_bucket_m18/
