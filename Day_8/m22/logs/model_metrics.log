@@ -1,0 +1,2 @@
+2022-01-17T13:23:11,834 - HandlerTime.Milliseconds:241.47|#ModelName:resnet18,Level:Model|#hostname:MacBook-Pro-tilhrende-August.local,requestID:9cf0d049-9c41-4e8d-81ee-a32709825993,timestamp:1642422191
+2022-01-17T13:23:11,837 - PredictionTime.Milliseconds:241.51|#ModelName:resnet18,Level:Model|#hostname:MacBook-Pro-tilhrende-August.local,requestID:9cf0d049-9c41-4e8d-81ee-a32709825993,timestamp:1642422191
